@@ -202,7 +202,7 @@ AddEventHandler('suku:ImplementNitro', function(vehicle, plate)
     FreezeEntityPosition(GetPlayerPed(-1), false)
     TriggerServerEvent('suku:RemoveNitro', 1)
     TriggerServerEvent('suku:InstallNitro', plate, 100)
-    exports['mythic_notify']:DoHudText('inform', 'Nitro has been installed!')
+    exports['mythic_notify']:SendAlert('inform', 'Nitro has been installed!')
     IsInstallingNitro = false
     RefreshList()
 end)
